@@ -1,12 +1,11 @@
 import css from "./Contact.module.css";
-import { TiUser } from "react-icons/ti";
-import { TiPhone } from "react-icons/ti";
+import { TiUser, TiPhone } from "react-icons/ti";
 import { useDispatch } from "react-redux";
 import { deleteContact } from "../../redux/contactsSlice";
 
 const Contact = ({ contact }) => {
-  const { id, name, number } = contact;
   const dispatch = useDispatch();
+  const { id, name, number } = contact;
 
   const handleDelete = () => dispatch(deleteContact(id));
 
